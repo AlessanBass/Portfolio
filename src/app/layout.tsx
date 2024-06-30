@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Oswald } from "next/font/google";
+import iconPage from "../../public/icon_page.png";
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const oswald = Oswald({subsets: ["latin"]});
 
 export const metadata: Metadata = {
   title: "Página Inicial",
+  icons:iconPage.src,
 };
 
 export default function RootLayout({
@@ -16,8 +18,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <PrimeReactProvider>
-        <body className={inter.className}>{children}</body>
+      <PrimeReactProvider >
+        <body className={oswald.className}>{children}</body>
       </PrimeReactProvider>
     </html>
   );
