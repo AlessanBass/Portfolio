@@ -1,21 +1,15 @@
 'use client';
-import Image from "next/image";
-import { ChangeEvent, useState } from 'react';
-import { InputText } from 'primereact/inputtext';
+import BannerPrincipal from "./components/BannerPrincipal";
+import Header from "./components/Header";
+import SobreMin from "./components/SobreMim";
 
 
 export default function Home() {
-  const [value, setValue] = useState('');
   return (
     <main>
-      <h1>Playground</h1>
-      <InputText
-        value={value}
-        onChange={(e: ChangeEvent<HTMLInputElement>) =>
-          setValue(e.target.value)
-        }
-      />
-      <p>{value}</p>
+      <Header/>
+      <BannerPrincipal/>
+      <SobreMin/>
     </main>
   );
 }
