@@ -1,0 +1,21 @@
+[
+    {
+        "projetoId": 1,
+        "title": "Aloca + Match",
+        "description": "Projeto criado para o meu TCC",
+        "imageTitle": "../banner_main.jpg"
+    },
+    {
+        "projetoId": 2,
+        "title": "Ale Bikes",
+        "description": "E-comerce de vendas de biciletas",
+        "imageTitle": "../banner_main.jpg"
+    },
+    {
+        "projetoId": 3,
+        "title": "Cardápio Online",
+        "description": "Cardápio Siri Cascudo",
+        "imageTitle": "../banner_main.jpg"
+    }
+
+]
