@@ -1,37 +1,46 @@
 'use client';
+import { useRouter } from "next/navigation";
 import styleSobreMin from "@/app/styles/sobre.module.css";
 import imageSobre from "../../../public/icon_banner.jpeg";
-import Image from "next/image";
-import teste from "../../../public/banner_main.jpg";
 import { Card } from "primereact/card";
+import projetosData from "../../../public/projetos/projetos.json";
+import Link from "next/link";
 
+interface Projetos {
+    projetoId: number;
+    title: string;
+    description: string;
+    imageTitle: string;
+}
 
 export default function SobreMim() {
-
-    const header = (
-        <img alt="Card" src={teste.src} className={`${styleSobreMin.imgCard}`}/>
-    );
+    const router = useRouter();
+    const projetos: Projetos[] = projetosData;
+    const handleCardClick = (id: number) => {
+        router.push(`pages/projeto/${id}`);
+    };
 
     return (
         <div className={`${styleSobreMin.divSobre}`} id="sobre">
             <h2 className={`${styleSobreMin.h2}`}>PROJETOS</h2>
+            <Link href='projeto/2'> clique aqui</Link>
 
             <div className={`${styleSobreMin.biografia}`}>
-                <Card header={header} className={`${styleSobreMin.card}`}>
-                    <div className={`${styleSobreMin.cardBody}`}>
-                        <h2 className={`${styleSobreMin.h2Card}`}>Aloca + Match</h2>
-                         <p>
-                            Projeto criado com base no meu TCC
-                         </p>
-                    </div>
-                </Card>
-
-                <Card header={header} className={`${styleSobreMin.card}`}>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae
-                        numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
-                    </p>
-                </Card>
+                {projetos.map((projeto, index) => (
+                    <Card
+                    key={projeto.projetoId} 
+                    header={<img alt="Card" src={projeto.imageTitle} className={`${styleSobreMin.imgCard}`} />}
+                    className={`${styleSobreMin.card}`}
+                    onClick={() => handleCardClick(projeto.projetoId)}
+                    >
+                        <div className={`${styleSobreMin.cardBody}`}>
+                            <h2 className={`${styleSobreMin.h2Card}`}>{projeto.title}</h2>
+                            <p className={`${styleSobreMin.pCard}`}>
+                                {projeto.description}
+                            </p>
+                        </div>
+                    </Card>
+                ))}
             </div>
         </div>
     );

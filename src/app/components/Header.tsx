@@ -12,7 +12,7 @@ export default function Header() {
             </Link>
 
             <div className={`${stylesHeader.divLinks}`}>
-                <Link className={`${stylesHeader.link}`} href="sobre">Sobre mim</Link>|
+                <Link className={`${stylesHeader.link}`} href="#sobre">Sobre mim</Link>|
                 <Link className={`${stylesHeader.link}`} href="teste">Projetos</Link>|
                 <Link className={`${stylesHeader.link}`} href="#servicos">Serviços</Link>|
                 <Link className={`${stylesHeader.link}`} href="#contato">Contato</Link>

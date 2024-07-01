@@ -49,9 +49,14 @@
     width: 100%;
 }
 
-.card{
+.card {
     width: 30%;
     box-shadow: 0px 0px 6px red;
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.card:hover {
+    transform: scale(1.1); /* Aplica um zoom de 10% */ransform: translate(10px, 10px); /* Move o elemento 10px para a direita e 10px para baixo */
 }
 
 .cardBody{
@@ -61,4 +66,8 @@
 
 .h2Card{
     padding: 10px;
+}
+
+.pCard{
+    padding: 5px 10px 5px 10px;
 }
