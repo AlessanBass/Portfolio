@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import projetosData from "../../../../public/projetos/projetos.json";
 import { useEffect, useState } from "react";
 import style from "@/styles/projetoIndividual.module.css";
-import Image from "next/image";
 import React from "react";
 
 interface Projeto {
@@ -19,20 +18,41 @@ export default function Projeto() {
     const router = useRouter();
     const { id } = router.query;
     const [projeto, setProjeto] = useState<Projeto | null>(null);
+    const [images, setImages] = useState<any[]>([]);
+    const [currentImage, setCurrentImage] = useState<number | null>(null);
 
     useEffect(() => {
         if (id) {
             const projetoEncontrado = projetosData.find((proj: Projeto) => proj.projetoId === parseInt(id as string));
             setProjeto(projetoEncontrado || null);
 
-            // Define o título da página
             if (projetoEncontrado) {
                 document.title = projetoEncontrado.title;
+                const formattedImages = projetoEncontrado.imagens?.map(img => ({
+                    itemImageSrc: img,
+                    thumbnailImageSrc: img,
+                    alt: projetoEncontrado.title
+                })) || [];
+                setImages(formattedImages);
             }
         }
-
-
     }, [id]);
+
+    const openModal = (imageIndex: number) => {
+        setCurrentImage(imageIndex);
+    };
+
+    const closeModal = () => {
+        setCurrentImage(null);
+    };
+
+    const showNextImage = () => {
+        setCurrentImage((prevImage) => (prevImage! + 1) % images.length);
+    };
+
+    const showPrevImage = () => {
+        setCurrentImage((prevImage) => (prevImage! - 1 + images.length) % images.length);
+    };
 
     if (!projeto) {
         return <div>Carregando...</div>;
@@ -42,36 +62,58 @@ export default function Projeto() {
         <>
             <Header />
             <div className={`${style.section1}`}>
-                <h1 className={`${style.h1}`}> INFORMAÇÕES</h1>
+                <h1 className={`${style.h1}`}>INFORMAÇÕES</h1>
                 <div className={style.containerPrincipal}>
                     <img className={`${style.img}`} src={projeto.imageTitle} alt={projeto.title} />
-                    {/* <p className={style.p}>{projeto.description}</p> */}
                     <div className={`${style.containerParagrafo}`}>
                         {projeto.textos?.map((texto, index) => (
                             <React.Fragment key={index}>
                                 {index === 0 ? <h2 className={style.pTitle}>{projeto.title}</h2> : null}
                                 <p className={style.p}>{texto}</p>
                             </React.Fragment>
-
                         ))}
                     </div>
                 </div>
             </div>
-            {/* SECTION 2: Tecnologias Utilizadas - Links*/}         
             <div className={`${style.section2}`}>
-                <h1 className={`${style.h1}`}> TECNOLOGIAS UTILIZADAS</h1>
+                <h1 className={`${style.h1}`}>TECNOLOGIAS UTILIZADAS</h1>
             </div>
-
-            {/* SECTION 3: Galeria */}         
             <div className={`${style.section1}`}>
-                <h1 className={`${style.h1}`}> GALERIA DE IMAGENS</h1>
+                <h1 className={`${style.h1}`}>GALERIA DE IMAGENS</h1>
+                <div>
+                    {images && images.length > 0 && (
+                        <div className={`${style.containerPai}`}>
+                            <div className={`${style.containerImgs}`}>
+                                {images.map((image, index) => (
+                                    <div key={index}>
+                                        <img
+                                            className={`${style.imgGalerry}`}
+                                            src={image.thumbnailImageSrc}
+                                            alt={image.alt}
+                                            style={{ cursor: 'pointer' }}
+                                            onClick={() => openModal(index)}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                </div>
             </div>
+            {currentImage !== null && (
+                <div className={style.modal} onClick={closeModal}>
+                    <span className={style.closeButton} onClick={closeModal}>&times;</span>
+                    <img className={style.modalContent} src={images[currentImage].thumbnailImageSrc} alt={images[currentImage].alt} />
+                    <div className={style.controls}>
+                        <button onClick={(e) => { e.stopPropagation(); showPrevImage(); }}>
+                            <i className="fa-solid fa-angle-left"></i>
+                        </button>
+                        <button onClick={(e) => { e.stopPropagation(); showNextImage(); }}>
+                            <i className="fa-solid fa-angle-right"></i>
+                        </button>
+                    </div>
+                </div>
+            )}
         </>
     );
 }
-
-{/* <div className={style.imageGallery}>
-                    {projeto.imagens?.map((imagem, index) => (
-                        <Image key={index} src={imagem} alt={`Imagem ${index + 1}`} width={500} height={300} />
-                    ))}
-                </div> */}
