@@ -1,4 +1,4 @@
-.h1{
+.h1 {
     text-align: center;
     background-color: orange;
     margin: 20px auto auto auto;
@@ -7,7 +7,7 @@
     border-radius: 10px;
 }
 
-.containerPrincipal{
+.containerPrincipal {
     padding: 10px;
     margin: 20px auto auto auto;
     display: flex;
@@ -18,21 +18,22 @@
     width: 90%;
 }
 
-.img{
-    width: 50%; /* Lembar de colocar em pix */
+.img {
+    width: 50%;
+    /* Lembar de colocar em pix */
     height: auto;
     border-radius: 10px;
 }
 
-.p{
+.p {
     padding: 10px;
     color: white;
     width: 100%;
     text-align: justify;
-    
+
 }
 
-.containerParagrafo{
+.containerParagrafo {
     display: flex;
     flex-direction: column;
     width: 40%;
@@ -42,7 +43,7 @@
     border-radius: 10px;
 }
 
-.pTitle{
+.pTitle {
     background-color: orange;
     text-align: center;
     color: black;
@@ -50,7 +51,7 @@
     border-radius: 10px;
 }
 
-.section1{
+.section1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,14 +64,14 @@
     background-repeat: no-repeat;
     /* Evita que a imagem se repita */
     background-attachment: fixed;
-   /*  height: 100vh; */
+    /*  height: 100vh; */
     /* background-color: black; */
     box-shadow: 0px 0px 8px black;
     margin-bottom: 10px;
     width: 100%;
 }
 
-.section2{
+.section2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,20 +89,20 @@
     margin-bottom: 10px;
 }
 
-.gallery{
+.gallery {
     border: 1px solid red;
     width: 60%;
     background-color: black;
 }
 
-.containerPai{
-    border: 1px solid orange;
+.containerPai {
     padding: 10px;
     width: 100%;
+    margin-top: 10px;
 }
 
-.containerImgs{
-    border: 1px solid green;
+.containerImgs {
+  /*   border: 1px solid green; */
     padding: 10px;
     width: 100%;
     display: flex;
@@ -110,44 +111,64 @@
     justify-content: center;
 }
 
-.imgGalerry{
+.imgGalerry {
     width: 450px;
     padding: 10px;
     box-shadow: 0px 0px 8px aqua;
-    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+    transition: transform 0.3s ease;
+    /* Adiciona uma transição suave */
     margin-right: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
 }
 
-.imgGalerry:hover{
-    transform: scale(1.1); /* Aplica um zoom de 10% */
+.imgGalerry:hover {
+    transform: scale(1.1);
+    /* Aplica um zoom de 10% */
 }
 
-/* Arquivo CSS */
-.customgalleria .pgalleriaitemnavleft, 
-.customgalleria .pgalleriaitemnavright {
-  background-color: #333; /* Cor de fundo */
-  color: #fff;           /* Cor do texto/ícone */
-  border-radius: 50%;    /* Bordas arredondadas */
-  width: 40px;           /* Largura do navegador */
-  height: 40px;          /* Altura do navegador */
-  display: flex;         /* Flexbox para centralizar o conteúdo */
-  align-items: center;   /* Alinha verticalmente o conteúdo */
-  justify-content: center; /* Alinha horizontalmente o conteúdo */
+/* Tentantiva de ativar minha galeria */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
-/* Adiciona espaçamento em torno dos navegadores */
-.customgalleria .pgalleriaitemnavleft {
-  margin-left: 10px;
+.modalContent {
+    max-width: 90%;
+    max-height: 90%;
 }
 
-.customgalleria .pgalleriaitemnavright {
-  margin-right: 10px;
+.closeButton {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 60px;
+    color: red;
+    cursor: pointer;
 }
 
-/* Adiciona hover effects */
-.customgalleria .pgalleriaitemnavleft:hover, 
-.customgalleria .pgalleriaitemnavright:hover {
-  background-color: #555; /* Cor de fundo ao passar o mouse */
+.controls {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.controls button {
+    background-color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+    font-size: 1.3em;
 }
