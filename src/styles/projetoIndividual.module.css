@@ -63,10 +63,11 @@
     background-repeat: no-repeat;
     /* Evita que a imagem se repita */
     background-attachment: fixed;
-    height: 100vh;
+   /*  height: 100vh; */
     /* background-color: black; */
     box-shadow: 0px 0px 8px black;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .section2{
@@ -85,4 +86,68 @@
     height: 100vh;
     background-color: black;
     margin-bottom: 10px;
+}
+
+.gallery{
+    border: 1px solid red;
+    width: 60%;
+    background-color: black;
+}
+
+.containerPai{
+    border: 1px solid orange;
+    padding: 10px;
+    width: 100%;
+}
+
+.containerImgs{
+    border: 1px solid green;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imgGalerry{
+    width: 450px;
+    padding: 10px;
+    box-shadow: 0px 0px 8px aqua;
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.imgGalerry:hover{
+    transform: scale(1.1); /* Aplica um zoom de 10% */
+}
+
+/* Arquivo CSS */
+.customgalleria .pgalleriaitemnavleft, 
+.customgalleria .pgalleriaitemnavright {
+  background-color: #333; /* Cor de fundo */
+  color: #fff;           /* Cor do texto/ícone */
+  border-radius: 50%;    /* Bordas arredondadas */
+  width: 40px;           /* Largura do navegador */
+  height: 40px;          /* Altura do navegador */
+  display: flex;         /* Flexbox para centralizar o conteúdo */
+  align-items: center;   /* Alinha verticalmente o conteúdo */
+  justify-content: center; /* Alinha horizontalmente o conteúdo */
+}
+
+/* Adiciona espaçamento em torno dos navegadores */
+.customgalleria .pgalleriaitemnavleft {
+  margin-left: 10px;
+}
+
+.customgalleria .pgalleriaitemnavright {
+  margin-right: 10px;
+}
+
+/* Adiciona hover effects */
+.customgalleria .pgalleriaitemnavleft:hover, 
+.customgalleria .pgalleriaitemnavright:hover {
+  background-color: #555; /* Cor de fundo ao passar o mouse */
 }
