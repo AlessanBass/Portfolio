@@ -10,7 +10,6 @@ export default function BannerPrincipal() {
         <div className={`${style.bannerPrincipal}`}>
             <div className={`${style.elementos}`}>
                 <Image alt="Logo Alessandro" src={`${logo.src}`} width={400} height={400} className={`${style.img}`}/>
-                <Link href="#sobre" className={`${style.link}`}> Projetos </Link>
             </div>
         </div>
 

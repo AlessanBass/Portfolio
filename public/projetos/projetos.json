@@ -2,14 +2,32 @@
     {
         "projetoId": 1,
         "title": "Aloca + Match",
-        "description": "Projeto criado para o meu TCC",
-        "imageTitle": "../banner_main.jpg"
+        "description": "Sistema Para Alocação de Disciplinas",
+        "imageTitle": "/projetos/aloca_match/aloca_gif.gif",
+        "imagens":[
+            "/projetos/aloca_match/aloca_1.png",
+            "/projetos/aloca_match/aloca_2.png",
+            "/projetos/aloca_match/aloca_3.png",
+            "/projetos/aloca_match/aloca_4.png",
+            "/projetos/aloca_match/aloca_5.png",
+            "/projetos/aloca_match/aloca_6.png",
+            "/projetos/aloca_match/aloca_7.png",
+            "/projetos/aloca_match/aloca_8.png"
+        ],
+        "textos":[
+            "Aloca + Match é a solução inovadora projetada para simplificar e otimizar o processo de alocação de disciplinas na UESC. Desenvolvido para atender às demandas específicas do ambiente acadêmico, nosso sistema elimina a complexidade e o potencial de erro associados à alocação manual de disciplinas para professores.",
+            "Não apenas simplificamos o processo, mas também aumentamos a eficiência, permitindo que os gestores acadêmicos foquem em atividades mais estratégicas. Com Aloca + Match, garantimos que cada professor seja alocado nas disciplinas de forma mais eficiente, promovendo um ambiente acadêmico mais organizado e produtivo."
+        ]
     },
     {
         "projetoId": 2,
         "title": "Ale Bikes",
         "description": "E-comerce de vendas de biciletas",
-        "imageTitle": "../banner_main.jpg"
+        "imageTitle": "/projetos/mundo_mtb/mtb_gif.gif",
+        "textos":[
+            "Aloca + Match é a solução inovadora projetada para simplificar e otimizar o processo de alocação de disciplinas na UESC. Desenvolvido para atender às demandas específicas do ambiente acadêmico, nosso sistema elimina a complexidade e o potencial de erro associados à alocação manual de disciplinas para professores.",
+            "Não apenas simplificamos o processo, mas também aumentamos a eficiência, permitindo que os gestores acadêmicos foquem em atividades mais estratégicas. Com Aloca + Match, garantimos que cada professor seja alocado nas disciplinas de forma mais eficiente, promovendo um ambiente acadêmico mais organizado e produtivo."
+        ]
     },
     {
         "projetoId": 3,
