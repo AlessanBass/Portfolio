@@ -18,7 +18,10 @@
         "textos":[
             "Aloca + Match é a solução inovadora projetada para simplificar e otimizar o processo de alocação de disciplinas na UESC. Desenvolvido para atender às demandas específicas do ambiente acadêmico, nosso sistema elimina a complexidade e o potencial de erro associados à alocação manual de disciplinas para professores.",
             "Não apenas simplificamos o processo, mas também aumentamos a eficiência, permitindo que os gestores acadêmicos foquem em atividades mais estratégicas. Com Aloca + Match, garantimos que cada professor seja alocado nas disciplinas de forma mais eficiente, promovendo um ambiente acadêmico mais organizado e produtivo."
-        ]
+        ],
+        "front": ["NextJs", "Material UI", "PrimeReact"],
+        "back": ["NestJS"],
+        "banco": ["MySQL", "Prisma ORM"]
     },
     {
         "projetoId": 2,
@@ -38,7 +41,10 @@
             "/projetos/mundo_mtb/mtb_5.png",
             "/projetos/mundo_mtb/mtb_6.png",
             "/projetos/mundo_mtb/mtb_7.png"
-        ]
+        ],
+        "front": ["HTML", "CSS", "JS", "Bootstrap", "EJS"],
+        "back": ["NodeJs", "Express"],
+        "banco": ["MySQL"]
     },
     {
         "projetoId": 3,

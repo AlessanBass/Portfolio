@@ -12,6 +12,9 @@ interface Projeto {
     imageTitle: string;
     imagens?: string[];
     textos?: string[];
+    front?: string[];
+    back?: string[];
+    banco?: string[];
 }
 
 export default function Projeto() {
@@ -77,6 +80,55 @@ export default function Projeto() {
             </div>
             <div className={`${style.section2}`}>
                 <h1 className={`${style.h1}`}>TECNOLOGIAS UTILIZADAS</h1>
+                <div className={`${style.conatinerTecPai}`}>
+                    <div className={`${style.containerTecnologias}`}>
+                        <h2 className={`${style.h2}`}>
+                            <div className={`${style.cabecalhoH2}`}>
+                                <i className="fa-solid fa-code"></i>
+                                Frontend
+                            </div>
+                        </h2>
+                        {projeto.front && projeto.front.length > 0 && (
+                            <ul className={`${style.ul}`}>
+                                {projeto.front.map((front, index) => (
+                                    <li key={index}> {front}</li>
+                                ))}
+                            </ul>
+                        )}
+                    </div>
+
+                    <div>
+                        <h2 className={`${style.h2}`}>
+                            <div className={`${style.cabecalhoH2}`}>
+                                <i className="fa-solid fa-server"></i>
+                                Backend
+                            </div>
+                        </h2>
+                        {projeto.back && projeto.back.length > 0 && (
+                            <ul className={`${style.ul}`}>
+                                {projeto.back.map((back, index) => (
+                                    <li key={index}> {back}</li>
+                                ))}
+                            </ul>
+                        )}
+                    </div>
+
+                    <div>
+                        <h2 className={`${style.h2}`}>
+                            <div className={`${style.cabecalhoH2}`}>
+                                <i className="fa-solid fa-database"></i>
+                                Banco de Dados
+                            </div>
+                        </h2>
+                        {projeto.banco && projeto.banco.length > 0 && (
+                            <ul className={`${style.ul}`}>
+                                {projeto.banco.map((banco, index) => (
+                                    <li key={index}> {banco}</li>
+                                ))}
+                            </ul>
+                        )}
+                    </div>
+                </div>
             </div>
             <div className={`${style.section1}`}>
                 <h1 className={`${style.h1}`}>GALERIA DE IMAGENS</h1>
