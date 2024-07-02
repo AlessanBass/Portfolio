@@ -46,7 +46,7 @@
 }
 
 .imgCard{
-    width: 100%;
+   width: 100%;
 }
 
 .card {
@@ -57,7 +57,7 @@
 }
 
 .card:hover {
-    transform: scale(1.1); /* Aplica um zoom de 10% */ransform: translate(10px, 10px); /* Move o elemento 10px para a direita e 10px para baixo */
+    transform: scale(1.1); /* Aplica um zoom de 10% */
 }
 
 .cardBody{
