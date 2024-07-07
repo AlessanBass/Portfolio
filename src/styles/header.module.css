@@ -7,7 +7,18 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    
+    background-image: url('../../public/matriz.gif');
+    background-size: cover;
+    /* Ajusta a imagem para cobrir todo o elemento */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Evita que a imagem se repita */
+    background-attachment: fixed;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 99999999999;
 }
 
 .logo{
@@ -30,4 +41,9 @@
 
 .link:hover{
     color: orange;
+}
+
+.span{
+    color: orange;
+    padding: 5px;
 }

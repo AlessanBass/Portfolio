@@ -35,10 +35,7 @@ export default function SobreMim() {
                         onClick={() => handleCardClick(projeto.projetoId)}
                     >
                         <div className={`${styleSobreMin.cardBody}`}>
-                            <h2 className={`${styleSobreMin.h2Card}`}>{projeto.title}</h2>
-                            <p className={`${styleSobreMin.pCard}`}>
-                                {projeto.description}
-                            </p>
+                            <h2 className={`${styleSobreMin.h2Card}`}>{projeto.title} - {projeto.description} </h2>
                         </div>
                     </Card>
                 ))}

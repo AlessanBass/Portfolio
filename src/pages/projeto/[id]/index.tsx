@@ -4,6 +4,7 @@ import projetosData from "../../../../public/projetos/projetos.json";
 import { useEffect, useState } from "react";
 import style from "@/styles/projetoIndividual.module.css";
 import React from "react";
+import Link from "next/link";
 
 interface Projeto {
     projetoId: number;
@@ -12,6 +13,11 @@ interface Projeto {
     imageTitle: string;
     imagens?: string[];
     textos?: string[];
+    front?: string[];
+    back?: string[];
+    banco?: string[];
+    github?: string;
+    noAr?: string;
 }
 
 export default function Projeto() {
@@ -77,6 +83,77 @@ export default function Projeto() {
             </div>
             <div className={`${style.section2}`}>
                 <h1 className={`${style.h1}`}>TECNOLOGIAS UTILIZADAS</h1>
+                <div className={`${style.conatinerTecPai}`}>
+                    <div className={`${style.containerTecnologias}`}>
+                        <h2 className={`${style.h2}`}>
+                            <div className={`${style.cabecalhoH2}`}>
+                                <i className="fa-solid fa-code"></i>
+                                Frontend
+                            </div>
+                        </h2>
+                        {projeto.front && projeto.front.length > 0 && (
+                            <ul className={`${style.ul}`}>
+                                {projeto.front.map((front, index) => (
+                                    <li key={index}> {front}</li>
+                                ))}
+                            </ul>
+                        )}
+                    </div>
+
+                    <div>
+                        <h2 className={`${style.h2}`}>
+                            <div className={`${style.cabecalhoH2}`}>
+                                <i className="fa-solid fa-server"></i>
+                                Backend
+                            </div>
+                        </h2>
+                        {projeto.back && projeto.back.length > 0 && (
+                            <ul className={`${style.ul}`}>
+                                {projeto.back.map((back, index) => (
+                                    <li key={index}> {back}</li>
+                                ))}
+                            </ul>
+                        )}
+                    </div>
+
+                    <div>
+                        <h2 className={`${style.h2}`}>
+                            <div className={`${style.cabecalhoH2}`}>
+                                <i className="fa-solid fa-database"></i>
+                                Banco de Dados
+                            </div>
+                        </h2>
+                        {projeto.banco && projeto.banco.length > 0 && (
+                            <ul className={`${style.ul}`}>
+                                {projeto.banco.map((banco, index) => (
+                                    <li key={index}> {banco}</li>
+                                ))}
+                            </ul>
+                        )}
+                    </div>
+
+                    <div>
+                        <h2 className={`${style.h2}`}>
+                            <div className={`${style.cabecalhoH2}`}>
+                                <i className="fa-solid fa-circle-info"></i>
+                                Informações
+                            </div>
+                        </h2>
+                        <ul className={`${style.ul}`}>
+                            <li>
+                                <i className="fa-brands fa-github"></i>
+                                {projeto.github && <Link target="_blank" href={projeto.github}>Acesse aqui</Link>}
+                            </li>
+
+                            {projeto.noAr &&
+                                <li>
+                                    <Link target="_blank" href={projeto.noAr}>Acesse aqui</Link>
+                                </li>
+                            }
+
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div className={`${style.section1}`}>
                 <h1 className={`${style.h1}`}>GALERIA DE IMAGENS</h1>

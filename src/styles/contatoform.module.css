@@ -9,13 +9,14 @@
     padding: 20px;
     box-shadow: 0px 0px 8px black;
     border-radius: 15px;
-    width: 50%;
-    margin: 20px auto auto auto;
+    width: 70%;
+    margin: 30px auto auto auto;
 }
 
 .h3{
-    background-color: orange;
-    color: black;
+   /*  background-color: #00bfff; */
+    background-color: black;
+    color: white;
     text-align: center;
     text-transform: uppercase;
     padding: 10px;

@@ -7,8 +7,11 @@ export default function Header() {
     return (
         <header className={`${stylesHeader.header}`}>
 
-            <Link href="/">
-                <Image className={`${stylesHeader.logo}`} src={logo}  alt="Logo Alessandro C. Santos"></Image>
+            <Link className={`${stylesHeader.link}`} href="/">
+                {/* <Image className={`${stylesHeader.logo}`} src={logo}  alt="Logo Alessandro C. Santos"></Image> */}
+                <h1>Alessandro
+                    <span className={`${stylesHeader.span}`} >Dev</span>
+                </h1>
             </Link>
 
             <div className={`${stylesHeader.divLinks}`}>
