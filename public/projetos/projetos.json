@@ -2,7 +2,7 @@
     {
         "projetoId": 1,
         "title": "Aloca + Match",
-        "description": "Sistema Para Alocação de Disciplinas",
+        "description": "Sistema para Alocação de Disciplinas",
         "imageTitle": "/projetos/aloca_match/aloca_gif.gif",
         "imagens":[
             "/projetos/aloca_match/aloca_gif.gif",
@@ -21,16 +21,17 @@
         ],
         "front": ["NextJs", "Material UI", "PrimeReact"],
         "back": ["NestJS"],
-        "banco": ["MySQL", "Prisma ORM"]
+        "banco": ["MySQL", "Prisma ORM"],
+        "github": "Apenas um teste aqui",
+        "noAr": "re"
     },
     {
         "projetoId": 2,
-        "title": "Ale Bikes",
-        "description": "E-comerce de vendas de biciletas",
+        "title": "Mundo MTB",
+        "description": "E-comerce de Vendas de Bicicletas",
         "imageTitle": "/projetos/mundo_mtb/mtb_gif.gif",
         "textos":[
-            "Aloca + Match é a solução inovadora projetada para simplificar e otimizar o processo de alocação de disciplinas na UESC. Desenvolvido para atender às demandas específicas do ambiente acadêmico, nosso sistema elimina a complexidade e o potencial de erro associados à alocação manual de disciplinas para professores.",
-            "Não apenas simplificamos o processo, mas também aumentamos a eficiência, permitindo que os gestores acadêmicos foquem em atividades mais estratégicas. Com Aloca + Match, garantimos que cada professor seja alocado nas disciplinas de forma mais eficiente, promovendo um ambiente acadêmico mais organizado e produtivo."
+            "Bem-vindo ao Mundo MTB, o seu destino online para as melhores bicicletas do mercado! Nosso e-commerce é dedicado a oferecer uma ampla variedade de bicicletas para todos os tipos de ciclistas, desde iniciantes até os mais experientes. Com uma seleção cuidadosa de marcas renomadas e modelos inovadores, garantimos que você encontrará a bicicleta perfeita para suas aventuras. Navegar pelo nosso site é uma experiência agradável e intuitiva, onde você pode explorar detalhes, especificações e avaliações de cada produto, tudo para ajudá-lo a tomar a melhor decisão de compra."
         ],
         "imagens":[
             "/projetos/mundo_mtb/mtb_gif.gif",
@@ -49,7 +50,7 @@
     {
         "projetoId": 3,
         "title": "Cardápio Online",
-        "description": "Cardápio Siri Cascudo",
+        "description": "Siri Cascudo",
         "imageTitle": "../banner_main.jpg"
     }
 

@@ -4,6 +4,7 @@ import projetosData from "../../../../public/projetos/projetos.json";
 import { useEffect, useState } from "react";
 import style from "@/styles/projetoIndividual.module.css";
 import React from "react";
+import Link from "next/link";
 
 interface Projeto {
     projetoId: number;
@@ -15,6 +16,8 @@ interface Projeto {
     front?: string[];
     back?: string[];
     banco?: string[];
+    github?: string;
+    noAr?: string;
 }
 
 export default function Projeto() {
@@ -127,6 +130,28 @@ export default function Projeto() {
                                 ))}
                             </ul>
                         )}
+                    </div>
+
+                    <div>
+                        <h2 className={`${style.h2}`}>
+                            <div className={`${style.cabecalhoH2}`}>
+                                <i className="fa-solid fa-circle-info"></i>
+                                Informações
+                            </div>
+                        </h2>
+                        <ul className={`${style.ul}`}>
+                            <li>
+                                <i className="fa-brands fa-github"></i>
+                                {projeto.github && <Link target="_blank" href={projeto.github}>Acesse aqui</Link>}
+                            </li>
+
+                            {projeto.noAr &&
+                                <li>
+                                    <Link target="_blank" href={projeto.noAr}>Acesse aqui</Link>
+                                </li>
+                            }
+
+                        </ul>
                     </div>
                 </div>
             </div>
