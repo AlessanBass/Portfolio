@@ -11,7 +11,6 @@ export default function BannerPrincipal() {
         <div className={`${style.bannerPrincipal}`}>
             <div className={`${style.elementos}`}>
                 <Image alt="Logo Alessandro" src={`${logo.src}`} width={400} height={400} className={`${style.img}`}/>
-                {/* <Image alt="Logo Alessandro" src={`${test.src}`} width={400} height={400} className={`${style.img}`}/> */}
             </div>
         </div>
 

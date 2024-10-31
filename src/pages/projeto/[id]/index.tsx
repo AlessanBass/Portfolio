@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import style from "@/styles/projetoIndividual.module.css";
 import React from "react";
 import Link from "next/link";
+import Rodape from "@/components/Rodape";
 
 interface Projeto {
     projetoId: number;
@@ -68,13 +69,13 @@ export default function Projeto() {
         <>
             <Header />
             <div className={`${style.section1}`}>
-                <h1 className={`${style.h1}`}>INFORMAÇÕES</h1>
+                <h1 className={`${style.h1}`}>{projeto.title}</h1>
                 <div className={style.containerPrincipal}>
                     <img className={`${style.img}`} src={projeto.imageTitle} alt={projeto.title} />
                     <div className={`${style.containerParagrafo}`}>
                         {projeto.textos?.map((texto, index) => (
                             <React.Fragment key={index}>
-                                {index === 0 ? <h2 className={style.pTitle}>{projeto.title}</h2> : null}
+                            {/*     {index === 0 ? <h2 className={style.pTitle}>{projeto.title}</h2> : null} */}
                                 <p className={style.p}>{texto}</p>
                             </React.Fragment>
                         ))}
@@ -191,6 +192,8 @@ export default function Projeto() {
                     </div>
                 </div>
             )}
+            
+            <Rodape/>
         </>
     );
 }
