@@ -10,82 +10,44 @@ export default function Servicos() {
             <h2 className={servicos.h2}>SERVIÇOS</h2>
 
             <div className={servicos.listagemDeServicos}>
-                    {/* <div className={servicos.escopoDeServico}>
-                        <h3 className={servicos.h3}>Desenvolvimento Backend e API's</h3>
-
-                        <ul className={servicos.ul}>
-                            <li>Criação de APIs robustas e seguras usando .NET e Node.js.</li>
-                            <li>Implementação de arquitetura modular, garantindo escalabilidade e facilidade de manutenção.</li>
-                            <li>Criação de APIs RESTful, com camadas de autenticação e autorização para controlar o acesso.</li>
-                        </ul>
-                    </div> */}
-
                     <div className={servicos.escopoDeServico}>
-                        <h3 className={servicos.h3}>Testes Unitários e Qualidade de Código</h3>
-
-                        <ul className={servicos.ul}>
-                            <li>Desenvolvimento e manutenção de testes unitários com Xunit e bibliotecas de assertions como ShouldBe para garantir a robustez do sistema.</li>
-                            <li>Implementação de arquitetura modular, garantindo escalabilidade e facilidade de manutenção.</li>
-                            <li>Criação de APIs RESTful, com camadas de autenticação e autorização para controlar o acesso.</li>
-                        </ul>
+                        <h3 className={servicos.h3}>Desenvolvimento de APIs REST</h3>
+                        <p>
+                            Criação de APIs escaláveis para comunicação entre o frontend e o backend,
+                            permitindo que diferentes sistemas se integrem e troquem dados de forma segura e eficiente.
+                        </p>
                     </div>
 
                     <div className={servicos.escopoDeServico}>
-                        <h3 className={servicos.h3}>Testes Unitários e Qualidade de Código</h3>
-
-                        <ul className={servicos.ul}>
-                            <li>Desenvolvimento e manutenção de testes unitários com Xunit e bibliotecas de assertions como ShouldBe para garantir a robustez do sistema.</li>
-                            <li>Implementação de arquitetura modular, garantindo escalabilidade e facilidade de manutenção.</li>
-                            <li>Criação de APIs RESTful, com camadas de autenticação e autorização para controlar o acesso.</li>
-                        </ul>
+                        <h3 className={servicos.h3}>Gestão de Banco de Dados</h3>
+                        <p>
+                            Design, otimização e manutenção de bancos de dados relacionais e não-relacionais.
+                        </p>
                     </div>
-
-
-                        
+               
                     <div className={servicos.escopoDeServico}>
-                        <h3 className={servicos.h3}>Testes Unitários e Qualidade de Código</h3>
-
-                        <ul className={servicos.ul}>
-                            <li>Desenvolvimento e manutenção de testes unitários com Xunit e bibliotecas de assertions como ShouldBe para garantir a robustez do sistema.</li>
-                            <li>Implementação de arquitetura modular, garantindo escalabilidade e facilidade de manutenção.</li>
-                            <li>Criação de APIs RESTful, com camadas de autenticação e autorização para controlar o acesso.</li>
-                        </ul>
-                    </div>
-
-                    
-                    <div className={servicos.escopoDeServico}>
-                        <h3 className={servicos.h3}>Testes Unitários e Qualidade de Código</h3>
-
-                        <ul className={servicos.ul}>
-                            <li>Desenvolvimento e manutenção de testes unitários com Xunit e bibliotecas de assertions como ShouldBe para garantir a robustez do sistema.</li>
-                            <li>Implementação de arquitetura modular, garantindo escalabilidade e facilidade de manutenção.</li>
-                            <li>Criação de APIs RESTful, com camadas de autenticação e autorização para controlar o acesso.</li>
-                        </ul>
+                        <h3 className={servicos.h3}>Integração com Serviços de Terceiros</h3>
+                        <p>Integração de APIs e serviços externos, como sistemas de pagamento, redes sociais, 
+                            sistemas de envio de e-mails e notificações, entre outros.</p>
                     </div>
 
                     <div className={servicos.escopoDeServico}>
-                        <h3 className={servicos.h3}>Testes Unitários e Qualidade de Código</h3>
-
-                        <ul className={servicos.ul}>
-                            <li>Desenvolvimento e manutenção de testes unitários com Xunit e bibliotecas de assertions como ShouldBe para garantir a robustez do sistema.</li>
-                            <li>Implementação de arquitetura modular, garantindo escalabilidade e facilidade de manutenção.</li>
-                            <li>Criação de APIs RESTful, com camadas de autenticação e autorização para controlar o acesso.</li>
-                        </ul>
+                        <h3 className={servicos.h3}>Desenvolvimento de Microserviços</h3>
+                        <p>Arquitetura de sistemas baseados em microserviços,
+                            permitindo maior flexibilidade e escalabilidade ao sistema.</p>
                     </div>
 
                     <div className={servicos.escopoDeServico}>
-                        <h3 className={servicos.h3}>Testes Unitários e Qualidade de Código</h3>
-
-                        <ul className={servicos.ul}>
-                            <li>Desenvolvimento e manutenção de testes unitários com Xunit e bibliotecas de assertions como ShouldBe para garantir a robustez do sistema.</li>
-                            <li>Implementação de arquitetura modular, garantindo escalabilidade e facilidade de manutenção.</li>
-                            <li>Criação de APIs RESTful, com camadas de autenticação e autorização para controlar o acesso.</li>
-                        </ul>
+                        <h3 className={servicos.h3}>Testes Unitários</h3>
+                        <p>Implementação de testes unitários, testes de integração 
+                            e testes de carga.</p>
                     </div>
-                
 
+                    <div className={servicos.escopoDeServico}>
+                        <h3 className={servicos.h3}>Documentação de APIs e Endpoints</h3>
+                        <p>Criação de documentação detalhada de APIs e endpoints, facilitando o uso e a integração por outros desenvolvedores e clientes.</p>
+                    </div>
             </div>
-
         </div>
     );
 }
