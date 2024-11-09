@@ -1,0 +1,95 @@
+.divExperiencias {
+
+    padding: 10px;
+    color: white;
+    /*  background-color: #1D3557; */
+ /*    background-color: black; */
+    /*    box-shadow: 0px 0px 8px white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../public/fundo_7.jpg');
+    /* background-color: rgb(193, 193, 193); */
+    background-size: cover;
+    /* Ajusta a imagem para cobrir todo o elemento */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Evita que a imagem se repita */
+    background-attachment: fixed;
+   /*  height: 100vh; */
+    /* Altura do elemento, 100% da altura da viewport */
+}
+
+.h2{
+    background-color: orange;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    color: black;
+    box-shadow: 5px 5px 5px black;
+}
+
+.containerExperiencias{
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.experiencia{
+    width: 50%;
+    text-align: justify;
+    background-color: rgba(28, 6, 154, 0.3); /* Fundo semi-transparente */
+    padding: 10px;
+    border-radius: 10px; /* Cantos arredondados (opcional) */
+    backdrop-filter: blur(10px); /* Ajuste o valor do desfoque conforme necessário */
+    -webkit-backdrop-filter: blur(10px); /* Suporte para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borda leve para destacar o efeito */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve para dar profundidade */
+    transition: transform 0.3s ease;
+    font-size: 1.3em;
+}
+
+.experiencia:hover{
+    transform: scale(1.1); /* Aplica um zoom de 10% */
+    background-color: rgba(195, 12, 174, 0.3); /* Fundo semi-transparente */
+    margin-right: 15px;
+    margin-bottom: 15px;
+    
+}
+
+.cargoHeader{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    gap: 10px;
+    background-color: orange;
+    border-radius: 10px;
+    color: black;
+
+}
+
+.dados{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-shadow: 0px 5px 8px black;
+}
+
+.span{
+    color: orangered;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 5px;
+}
+
+.icon{
+   margin-right: 5px;
+}
